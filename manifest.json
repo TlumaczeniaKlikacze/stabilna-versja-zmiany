@@ -1,0 +1,19 @@
+{
+    "name": "Zamiana magazynów dla serwisu idosell",
+    "description": "Mam sam zmieniać magazyn z M1 na M0 i odwrotnie",
+    "version": "1.0",
+    "permissions": ["https://silverstork.yourtechnicaldomain.com/panel/orderd*","https://silverstork.pl/panel/orderd*", "tabs"],
+    "manifest_version": 2, 
+    "icons": {
+
+    },
+    "browser_action": {   
+      "default_popup": "popup.html"  
+    }, 
+    "content_scripts": [  
+      {  
+          "matches": [ "https://silverstork.yourtechnicaldomain.com/panel/orderd*","https://silverstork.pl/panel/orderd*" ],  
+         "js": ["m1_to_m0.js"]  
+          }  
+      ]  
+  }
